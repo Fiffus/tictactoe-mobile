@@ -1,0 +1,7 @@
+{
+  "name": "tictactoe-mobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
