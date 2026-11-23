@@ -10,11 +10,19 @@
       <ion-title size="large">Home</ion-title>
     </ion-toolbar>
   </ion-header>
-  <div class="center">
-    <ion-card>
+  <div class="home-container">
+    <ion-card class="game-card">
       <ion-card-content>
         <ion-button class="play-button">
           Play
+        </ion-button>
+        <div class="connection-status">
+          <span class="status-indicator"></span>
+          <h2>Waiting for connection...</h2>
+        </div>
+        <p class="timer">5s</p>
+        <ion-button class="stop-button" fill="outline">
+          Stop searching
         </ion-button>
       </ion-card-content>
     </ion-card>

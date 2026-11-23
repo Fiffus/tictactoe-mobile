@@ -1,0 +1,88 @@
+.settings-container {
+  padding: 12px 8px;
+}
+
+.settings-card {
+  margin: 12px 8px;
+  border-radius: 16px;
+  border: 1px solid var(--ion-border-color);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+
+  ion-card-content {
+    padding: 20px;
+  }
+}
+
+.card-heading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+
+  ion-icon {
+    font-size: 25px;
+    color: var(--ion-color-primary);
+    flex-shrink: 0;
+  }
+
+  h2 {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0;
+    color: var(--ion-text-color);
+  }
+}
+
+.card-description {
+  font-size: 13px;
+  color: var(--ion-color-medium);
+  margin: 10px 0 16px;
+  line-height: 1.5;
+}
+
+.name-input {
+  --background: var(--ion-background-color);
+  --border-radius: 10px;
+  --border-color: var(--ion-border-color);
+  margin-bottom: 14px;
+}
+
+.save-button {
+  --border-radius: 10px;
+  --box-shadow: none;
+  font-weight: 600;
+  margin: 0;
+}
+
+.identifier-box {
+  background: var(--ion-color-light);
+  padding: 14px;
+  border-radius: 10px;
+
+  strong {
+    font-size: 19px;
+    letter-spacing: 1px;
+    color: var(--ion-text-color);
+  }
+}
+
+.bluetooth-setting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  .bluetooth-info {
+    flex: 1;
+  }
+
+  .card-description {
+    margin-bottom: 0;
+  }
+
+  ion-toggle {
+    flex-shrink: 0;
+  }
+}

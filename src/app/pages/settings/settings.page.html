@@ -3,11 +3,58 @@
     <ion-title>Settings</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Settings</ion-title>
     </ion-toolbar>
   </ion-header>
+  <div class="settings-container">
+    <ion-card class="settings-card">
+      <ion-card-content>
+        <div class="card-heading">
+          <ion-icon name="person-outline"></ion-icon>
+          <h2>Player name</h2>
+        </div>
+        <p class="card-description">
+          Choose the name other players will see.
+        </p>
+        <ion-input class="name-input" placeholder="Enter your name" fill="outline">
+        </ion-input>
+        <ion-button expand="block" class="save-button">
+          Set name
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+    <ion-card class="settings-card">
+      <ion-card-content>
+        <div class="card-heading">
+          <ion-icon name="finger-print-outline"></ion-icon>
+          <h2>Device identifier</h2>
+        </div>
+        <p class="card-description">
+          Your unique identifier used to identify your device.
+        </p>
+        <div class="identifier-box">
+          <strong>--</strong>
+        </div>
+      </ion-card-content>
+    </ion-card>
+    <ion-card class="settings-card">
+      <ion-card-content>
+        <div class="bluetooth-setting">
+          <div class="bluetooth-info">
+            <div class="card-heading">
+              <ion-icon name="bluetooth-outline"></ion-icon>
+              <h2>Bluetooth</h2>
+            </div>
+            <p class="card-description">
+              Enable Bluetooth to discover and connect with nearby players.
+            </p>
+          </div>
+          <ion-toggle></ion-toggle>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
