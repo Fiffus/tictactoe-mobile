@@ -5,6 +5,7 @@ pkgs.mkShell {
 	buildInputs = with pkgs; [
 		android-studio
 		ionic-cli
+    nodejs_22
 	];
 
 	shellHook = ''
