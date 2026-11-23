@@ -8,9 +8,9 @@ import {
 } from '@ionic/angular';
 import { addIcons } from 'ionicons';
 import {
-  calculatorOutline,
+  play,
   informationCircleOutline,
-  timeOutline,
+  settingsOutline,
 } from 'ionicons/icons';
 
 @Component({
@@ -24,9 +24,9 @@ export class TabsPage {
 
   constructor() {
     addIcons({
-      calculatorOutline,
+      play,
+      settingsOutline,
       informationCircleOutline,
-      timeOutline,
     });
   }
 }
