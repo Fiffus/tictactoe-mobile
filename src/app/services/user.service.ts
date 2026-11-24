@@ -5,7 +5,7 @@ import { type UserData } from '../models/user';
 @Injectable({
   providedIn: 'root',
 })
-export class User {
+export class UserService {
   private readonly storageKey = 'user';
 
   private readonly userState = signal<UserData | null>(null);
