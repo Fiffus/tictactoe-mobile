@@ -8,7 +8,50 @@ import { type MatchData, type MatchResult } from '../models/match';
 })
 export class MatchService {
   private readonly storageKey = 'match-history';
-  private readonly historyState = signal<MatchData[]>([]);
+  private readonly historyState = signal<MatchData[]>([
+    {
+      id: 'match-001',
+      local: { id: 'player-001', name: 'Alex' },
+      adversary: { id: 'player-002', name: 'Daniel' },
+      result: 'win',
+      playedAt: Date.now() - 1000 * 60 * 10,
+    },
+    {
+      id: 'match-002',
+      local: { id: 'player-001', name: 'Alex' },
+      adversary: { id: 'player-003', name: 'Sophie' },
+      result: 'loss',
+      playedAt: Date.now() - 1000 * 60 * 60,
+    },
+    {
+      id: 'match-003',
+      local: { id: 'player-001', name: 'Alex' },
+      adversary: { id: 'player-004', name: 'Michael' },
+      result: 'draw',
+      playedAt: Date.now() - 1000 * 60 * 60 * 3,
+    },
+    {
+      id: 'match-004',
+      local: { id: 'player-001', name: 'Alex' },
+      adversary: { id: 'player-005', name: 'Emma' },
+      result: 'win',
+      playedAt: Date.now() - 1000 * 60 * 60 * 24,
+    },
+    {
+      id: 'match-005',
+      local: { id: 'player-001', name: 'Alex' },
+      adversary: { id: 'player-006', name: 'Oliver' },
+      result: 'win',
+      playedAt: Date.now() - 1000 * 60 * 60 * 48,
+    },
+    {
+      id: 'match-006',
+      local: { id: 'player-001', name: 'Alex' },
+      adversary: { id: 'player-007', name: 'Charlotte' },
+      result: 'loss',
+      playedAt: Date.now() - 1000 * 60 * 60 * 72,
+    },
+  ]);
 
   readonly history = this.historyState.asReadonly();
 

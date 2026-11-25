@@ -9,6 +9,7 @@
       <ion-title size="large">Settings</ion-title>
     </ion-toolbar>
   </ion-header>
+
   <div class="settings-container">
     <ion-card class="settings-card">
       <ion-card-content>
@@ -16,30 +17,40 @@
           <ion-icon name="person-outline"></ion-icon>
           <h2>Player name</h2>
         </div>
+
         <p class="card-description">
           Choose the name other players will see.
         </p>
-        <ion-input class="name-input" placeholder="Enter your name" fill="outline">
+
+        <ion-input class="name-input" placeholder="Enter your name" fill="outline" [(ngModel)]="playerName"
+          maxlength="25">
         </ion-input>
-        <ion-button expand="block" class="save-button">
-          Set name
+
+        <ion-button expand="block" class="save-button" [disabled]="!playerName.trim() || saving" (click)="saveName()">
+          {{ saving ? 'Saving...' : 'Set name' }}
         </ion-button>
       </ion-card-content>
     </ion-card>
+
     <ion-card class="settings-card">
       <ion-card-content>
         <div class="card-heading">
           <ion-icon name="finger-print-outline"></ion-icon>
-          <h2>Device identifier</h2>
+          <h2>User identifier</h2>
         </div>
+
         <p class="card-description">
-          Your unique identifier used to identify your device.
+          Your unique ID used to identify you.
         </p>
+
         <div class="identifier-box">
-          <strong>--</strong>
+          <span class="identifier">
+            {{ userService.user()?.id ?? 'Not initialized' }}
+          </span>
         </div>
       </ion-card-content>
     </ion-card>
+
     <ion-card class="settings-card">
       <ion-card-content>
         <div class="bluetooth-setting">

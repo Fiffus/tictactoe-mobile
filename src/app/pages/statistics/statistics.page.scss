@@ -45,14 +45,17 @@
 
   &.won {
     border-left-color: #2ecc71;
+    background: rgba(#2ecc71, 0.2);
   }
 
   &.lost {
     border-left-color: #eb5757;
+    background: rgba(#eb5757, 0.2);
   }
 
   &.draw {
     border-left-color: #e0a526;
+    background: rgba(#e0a526, 0.2);
   }
 }
 

@@ -25,7 +25,7 @@ export class UserService {
 
   private async createId(username: string): Promise<string> {
     const timestamp = Date.now();
-    const input = `${username.trim().toLowerCase()}-${timestamp}`;
+    const input = `${username.trim().toLowerCase()}-${timestamp}-${crypto.randomUUID()}`;
 
     const data = new TextEncoder().encode(input);
     const hash = await crypto.subtle.digest('SHA-256', data);
